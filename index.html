@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fragments</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="layout">
+
+    <aside class="hero-side">
+
+      <div class="rule rule-top"></div>
+      <div class="rule rule-right"></div>
+      <div class="rule rule-bot"></div>
+
+      <div class="hero-content">
+
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dash"></span>
+          <span>A vision gallery</span>
+          <span class="eyebrow-dash"></span>
+        </div>
+
+          <span>Frag</span><em>ments</em>
+        </h1>
+
+        <p class="hero-by">by Himani</p>
+
+        <p class="hero-caption">
+          Pictures I gathered from the world as I saw it,<br>
+          and taught a machine to see it too.
+        </p>
+
+        <div class="gesture-guide">
+          <div class="guide-row">
+            <span class="guide-icon">✋</span>
+            <span>swipe hand to browse</span>
+          </div>
+          <div class="guide-row">
+            <span class="guide-icon">🤏</span>
+            <span>pinch to focus</span>
+          </div>
+          <div class="guide-row">
+            <span class="guide-icon keys">← →</span>
+            <span>arrow keys also work</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-counter">
+        <span id="counter">01</span>
+        <span class="counter-sep">—</span>
+        <span id="totalCount">26</span>
+      </div>
+
+    </aside>
+    <main class="gallery-side">
+
+      <header class="gallery-bar">
+        <span class="bar-label" id="imgLabel">—</span>
+        <nav class="nav-dots" id="navDots" aria-label="Gallery navigation"></nav>
+      </header>
+
+      <div class="strip-wrapper">
+        <div class="strip" id="strip">
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <div class="cv-panel">
+    <video id="webcam" autoplay playsinline muted></video>
+    <div class="cv-frame">
+      <canvas id="output"></canvas>
+      <i class="cv-corner tl"></i>
+      <i class="cv-corner tr"></i>
+      <i class="cv-corner bl"></i>
+      <i class="cv-corner br"></i>
+    </div>
+    <div class="gesture-badge">
+      <span class="badge-pip" id="badgePip"></span>
+      <span id="gestureLabel">initializing…</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
